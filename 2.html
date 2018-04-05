@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page 2</title>
+<link href="https://fonts.googleapis.com/css?family==Roboto+Slab" rel="stylesheet">
+</head>
+<style>
+	
+	* {
+		font-family: 'Robot Slab';
+	}
+
+	#wrapper {
+		width: 80%;
+		margin: 0 auto;
+		background: #8E44AD;
+	}
+
+	#navbar {
+		background: #AF601A;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	#main-content {
+		width: 60%;
+		float: left;
+	}
+
+	#sidebar {
+		width: 40%;
+		float: left;
+	}
+
+	#previewHeading {
+		text-align: center;
+		font-size: 1.2em;
+		color: white;
+		font-weight: bold;
+		font-variant: small-caps;
+	}
+
+	#preview {
+		background: #F5B041;
+	}
+
+	#previewFigure {
+		display: block;
+		text-align: center;
+	}
+
+	#preview > h2 {
+		font-size: 1.53em;
+	}
+
+	#sidebar > button {
+		display: block;
+		margin: 50px;
+	}
+
+	#mainContentHeading {
+		text-align: center;
+		color: white;
+	}
+
+	ul {
+		display: block;
+		text-align: center;
+	}
+
+	ul > li {
+		display: inline-block;
+	}
+
+	body {
+		background-image :  url('vikings.jpg');
+	}
+
+	header, footer {
+		background: #F5B041;
+		color: white;
+		text-align: center;
+	}
+
+	footer {
+		padding: 10px;
+		clear: left;
+		font-size: 1.6em;
+	}
+
+	nav {
+		border-radius: 25px;
+		padding: 20px;
+		margin: 20px;
+		background: #D4AC0D;
+	}
+
+	li > a {
+		text-decoration: none;
+		background: #8E44AD;
+		padding: 20px;
+		margin-right: 10px;
+		border-radius: 25px;
+		color: #F5B041;
+		border: 2px solid #F5B041;
+		clear: left;
+	}
+
+	li > a:hover {
+		text-decoration: none;
+		background: #F5B041;
+		padding: 20px;
+		margin-right: 10px;
+		border-radius: 25px;
+		color: #D7DBDD;
+		clear: left;
+	}
+
+	img {
+		margin: 5px;
+	}
+
+	figcaption {
+		font-style: italic;
+	}
+
+	p {
+		color: white;
+		text-align: center;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	ol > li {
+		color: white;
+	}
+
+
+
+</style>
+<body>
+	
+	<div id='wrapper'>
+
+		<header>
+			<h1>Page 2 </h1>
+		</header>
+
+		<nav id='navbar'>
+			<ul>
+				<li><a href='1.html'>Page 1</a></li>
+				<li><a href='2.html'>Page 2</a></li>
+				<li><a href='3.html'>Page 3</a></li>
+				<li><a href='4.html'>Page 4</a></li>
+				<li><a href='5.html'>Page 5</a></li>
+			</ul>
+		</nav>
+
+		<div id='preview'>
+			<h2 id='previewHeading'>Bread world</h2>
+			<figure id='previewFigure'>
+				<img src='breadPreview.jpg' width='600' height='300' 	/>
+				<figcaption> Figure 1 - A delicious example of the quality bread has to offer</figcaption>
+			</figure>
+		</div>
+
+		<div id='main-content'>
+			<h2 id='mainContentHeading'>A few facts about bread</h2>
+			<div id='mainParagraph'>
+				<p id='jsInsert'>
+				<p id='randomParagraph'>(These facts are provided by:)<a style='color: white' href='https://mobile-cuisine.com/did-you-know/bread-fun-facts/>'>	Mobile-cuisine.com</a></p>
+				<article>
+				<ol>
+					<li>It takes 9 seconds for a combine to harvest enough wheat to make about 70 loaves of bread.</li>
+					<li>Each American consumes, on average, 53 pounds of bread per year.</li>
+					<li>The “pocket” in pita bread is made by steam. The steam puffs up the dough and, as the bread cools and flattens, a pocket is left in the middle.</li>
+				</ol>
+			</article>
+		</p>
+	</div>
+		</div>
+
+		<div id='sidebar'>
+			<button onclick='breadFacts()'>Another fact about bread!</button>
+			<button onclick='breadPicture()'>A picture</button>
+		</div>
+
+		<footer>&copy; Josh Agan 2018</footer>
+
+	</div>
+
+	<script>
+		
+		function breadFacts(){
+			var article = document.querySelector('article');
+			article.textContent = '';	
+			var breadList = document.querySelector('jsInsert');
+			jsInsert.textContent = 'February 23rd is National Banana Bread Day.'
+		}
+
+		function breadPicture(){
+			var breadPic = document.createElement('img');
+			breadPic.src = 'jsBread.jpg';
+			breadPic.setAttribute('height', '300');
+			breadPic.setAttribute('width', '300');
+			document.getElementById('jsInsert').appendChild(breadPic);
+		}
+
+	</script>
+
+</body>
+</html>

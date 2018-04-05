@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Final Beginning Web Programming Assignment</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<style>
+	
+	* {
+		font-family: 'Lato';
+	}
+
+	#wrapper {
+		width: 80%;
+		margin: 0 auto;
+		background: #D7DBDD;
+	}
+
+	#navbar {
+		background: #566573;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	#main-content {
+		width: 60%;
+		float: left;
+	}
+
+	#sidebar {
+		width: 40%;
+		float: left;
+	}
+
+	#previewHeading {
+		text-align: center;
+		font-size: 1.2em;
+		color: white;
+		font-weight: bold;
+		font-variant: small-caps;
+	}
+
+	#preview {
+		background: #C70039;
+	}
+
+	#previewImages {
+		display: block;
+		text-align: center;
+	}
+
+	#preview > h2 {
+		font-size: 1.53em;
+	}
+
+	#sidebar > button {
+		display: block;
+		margin: 50px;
+	}
+
+	#mainContentHeading {
+		text-align: center;
+	}
+
+	ul {
+		display: block;
+		text-align: center;
+	}
+
+	ul > li {
+		display: inline-block;
+	}
+
+	body {
+		background:  #2C3E50;
+	}
+
+	header, footer {
+		background: #C70039;
+		color: white;
+		text-align: center;
+	}
+
+	footer {
+		padding: 10px;
+		clear: left;
+	}
+
+	nav {
+		border-radius: 25px;
+		padding: 20px;
+		margin: 20px;
+		background: #D4AC0D;
+	}
+
+	li > a {
+		text-decoration: none;
+		background: #D7DBDD;
+		padding: 20px;
+		margin-right: 10px;
+		border-radius: 25px;
+		color: #C70039;
+		border: 2px solid #C70039;
+		clear: left;
+	}
+
+	li > a:hover {
+		text-decoration: none;
+		background: #C70039;
+		padding: 20px;
+		margin-right: 10px;
+		border-radius: 25px;
+		color: #D7DBDD;
+		clear: left;
+	}
+
+	img {
+		margin: 5px;
+	}
+
+
+
+</style>
+</head>
+<body>
+	
+	<div id='wrapper'>
+
+		<header>
+			<h1>Josh's Random Website</h1>
+		</header>
+
+		<nav id='navbar'>
+			<ul>
+				<li><a href='1.html'>Page 1</a></li>
+				<li><a href='2.html'>Page 2</a></li>
+				<li><a href='3.html'>Page 3</a></li>
+				<li><a href='4.html'>Page 4</a></li>
+				<li><a href='5.html'>Page 5</a></li>
+			</ul>
+		</nav>
+
+		<div id='preview'>
+			<h2 id='previewHeading'>A preview of what is to come on this site:</h2>
+			<div id='previewImages'>
+				<a href='https://www.youtube.com/watch?v=dgBSwrFQqSY'><img src='monster-example.jpg' height='300' width='300' /></a>
+				<img src='broccoli.png' height='300' width='300' />
+				<img src='bread.jpg' height='300' width='300' />
+			</div>
+		</div>
+
+		<div id='main-content'>
+			<h2 id='mainContentHeading'>Where the functionality of buttons go</h2>
+			<article>
+				<p id='placeHere'></p>
+			</article>
+		</div>
+
+		<div id='sidebar'>
+			<p>Click here to add stuff to the main-content area on the left</p>
+			<button onclick='pizzaFunction()'>Display some pizza!</button>
+			<button onclick='pieFunction()'>How about a pie?</button>
+			<button onclick='baseballFunction()'>And a baseball??</button>
+		</div>
+
+		<footer>&copy; Josh Agan 2018</footer>
+
+	</div>
+
+
+	<script>
+		
+		function pizzaFunction(){
+			var pizza = document.createElement('img');
+			pizza.src = 'pizza.jpg'
+			pizza.setAttribute('height', '300');
+			pizza.setAttribute('width', '300');
+			document.getElementById('placeHere').appendChild(pizza);
+		}
+
+		function pieFunction(){
+			var pie = document.createElement('img');
+			pie.src = 'pie.jpg';
+			pie.setAttribute('height', '300');
+			pie.setAttribute('width', '300');
+			document.getElementById('placeHere').appendChild(pie);
+		}
+
+		function baseballFunction(){
+			var baseball = document.createElement('img');
+			baseball.src = 'baseball.jpeg';
+			baseball.setAttribute('height', '300');
+			baseball.setAttribute('width', '300');
+			document.getElementById('placeHere').appendChild(baseball);
+		}
+
+	</script>
+
+</body>
+</html>
